@@ -1,0 +1,175 @@
+body {
+  direction: rtl;
+}
+ul li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  padding: 0;
+}
+
+/* ------------------- header -------------------- */
+.links {
+  display: flex;
+  justify-content: space-between;
+  color: #646465;
+  background-color: #f9fafc;
+  flex-direction: row-reverse;
+  border: 1px #ccc solid;
+  margin: 0;
+}
+.links li {
+  border-right: 1px solid #ccc;
+  padding: 4px;
+}
+.links a {
+  padding-right: 10px;
+}
+/*
+=========
+==== header search-bar 
+=========
+*/
+header .search-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 15px;
+}
+/* header .nav-and-bar {
+  display: flex;
+} */
+header .search-bar input[type="search"] {
+  width: 70%;
+  border: none;
+  margin-right: 120px;
+  padding: 7px;
+  background-color: #eff2f7;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+header .search-bar input[type="search"]:focus-visible {
+  outline: none;
+}
+header .search-bar .cart {
+  width: 30px;
+  /* margin: 0 40px; */
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+header .search-bar img {
+  max-width: 100%;
+}
+header .search-bar .img {
+  width: 70px;
+}
+
+/* ------------------- main ------------------------ */
+main {
+  height: 100vh;
+}
+/* -------------------- footer ------------------- */
+footer {
+  color: #a3a3a3;
+}
+footer ul {
+  width: 17%;
+}
+footer .upper-part {
+  background-color: #333;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+footer li {
+  padding-top: 8px;
+}
+footer a {
+  color: #a3a3a3;
+  font-size: 0.9rem;
+}
+footer h3 {
+  margin: 0;
+  border-bottom: 1px solid #424242;
+}
+footer .posts {
+  margin-block: 1rem;
+  width: 22%;
+  position: relative;
+}
+footer .posts .contact-us {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+footer .posts form {
+  margin-top: 10px;
+  background-color: #484848;
+  padding: 8px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+footer input[type="search"] {
+  padding: 8px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+footer input[type="submit"] {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+footer .call-us {
+  color: white;
+}
+footer .lower-part {
+  direction: ltr;
+  font-size: 0.8rem;
+  padding: 15px 35px 30px 0;
+  padding-left: 35px;
+  background-color: #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .lower-part .pay-methods {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 120px;
+}
+footer .lower-part .img {
+  width: 55px;
+}
+footer .lower-part img {
+  max-width: 100%;
+}
