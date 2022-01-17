@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/css__slider.css" />
   </head>
   <body>
     <header>
@@ -32,6 +33,40 @@
         </div>
         <input type="search" placeholder="البحث" />
         <div class="cart"><img src="imgs/cart.png" alt="" /></div>
+      </div>
+
+      <!-- ------------------- slider ------------------- -->
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slides">
+            <div id="slides__1" class="slide">
+              <img src="imgs/slider_img.webp" alt="" />
+              <a class="slide__prev" href="#slides__4" title="Next"></a>
+              <a class="slide__next" href="#slides__2" title="Next"></a>
+            </div>
+            <div id="slides__2" class="slide">
+              <img src="imgs/slider_img2.webp" alt="" />
+              <a class="slide__prev" href="#slides__1" title="Prev"></a>
+              <a class="slide__next" href="#slides__3" title="Next"></a>
+            </div>
+            <div id="slides__3" class="slide">
+              <img src="imgs/slider_img3.jpg" alt="" />
+              <a class="slide__prev" href="#slides__2" title="Prev"></a>
+              <a class="slide__next" href="#slides__4" title="Next"></a>
+            </div>
+            <div id="slides__4" class="slide">
+              <img src="imgs/slider_img4.webp" alt="" />
+              <a class="slide__prev" href="#slides__3" title="Prev"></a>
+              <a class="slide__next" href="#slides__1" title="Prev"></a>
+            </div>
+          </div>
+          <div class="slider__nav">
+            <a class="slider__navlink" href="#slides__1"></a>
+            <a class="slider__navlink" href="#slides__2"></a>
+            <a class="slider__navlink" href="#slides__3"></a>
+            <a class="slider__navlink" href="#slides__4"></a>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -90,9 +125,7 @@
           </form>
           <div class="contact-us">
             <h3>تواصل معنا</h3>
-            <div class="social-icons">
-                
-            </div>
+            <div class="social-icons"></div>
           </div>
         </section>
       </section>
