@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@100;200;300;400;500;600;700;800;900&display=swap");
+      html {
+      }
+      body {
+        font-family: "Tajawal", sans-serif;
+        direction: rtl;
+        --text-color: #eff2f7;
+      }
+      a {
+        text-decoration: none;
+        color: #0052cc;
+      }
+      .logIn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        width: 43%;
+        margin: auto;
+        transform: translateY(15%);
+        background-color: white;
+        border-radius: 5px;
+        padding-bottom: 20px;
+      }
+      .logIn > button {
+        width: 25px;
+        height: 25px;
+        background-color: #d4050c5e;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+        position: relative;
+        top: 3px;
+        right: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+      }
+      .logIn > button:hover {
+        background-color: #d4050b;
+      }
+      .logIn img {
+        max-width: 100%;
+      }
+
+      h2 {
+        margin-top: 0;
+        box-shadow: 0px 12px 3px -13px black;
+        padding: 20px;
+      }
+
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      #countryCode {
+        border: none;
+        background-color: #eff2f7;
+        padding: 11px;
+        border-radius: 5px;
+        width: 27%;
+        margin-bottom: 5px;
+      }
+      .phone-number {
+        width: 77%;
+        display: flex;
+        justify-content: space-between;
+      }
+      #phone {
+        width: 65%;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 17px;
+      }
+      input[type="number"],
+      input[type="text"],
+      input[type="email"] {
+        background-color: #eff2f7;
+        border: none;
+        margin-bottom: 5px;
+        width: 73%;
+        padding: 7px;
+        border-radius: 3px;
+        font-size: 1rem;
+      }
+      input[type="text"]:focus-visible,
+      input[type="number"]:focus-visible,
+      input[type="email"] {
+        outline: none;
+      }
+      .password {
+        position: relative;
+      }
+      .forgot {
+        text-decoration: none;
+        color: #3e65a2;
+        font-weight: bold;
+        position: absolute;
+        top: 8px;
+        left: 10px;
+      }
+      input[type="text"]::placeholder,
+      input[type="email"]::placeholder {
+        position: absolute;
+        top: 0px;
+        right: 3px;
+        font-family: "Tajawal", sans-serif;
+        font-size: 0.7rem;
+      }
+      input[type="number"]::placeholder {
+        font-family: "Tajawal", sans-serif;
+      }
+      label {
+        display: inline-block;
+        font-size: 0.8rem;
+        color: #b5babc;
+      }
+      .check {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 76%;
+        margin-top: 3px;
+        /* margin-bottom: 5px; */
+      }
+      input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+      }
+      input[type="submit"] {
+        margin-top: 7px;
+      }
+      .btn {
+        padding: 10px 50px;
+        background: #e5e9f4;
+        border: none;
+        border-radius: 3px;
+        transition: 0.5s;
+        color: #adb2bd;
+        font-family: tajawal;
+        cursor: pointer;
+        width: 76%;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 0.7rem;
+        color: #b5babc;
+        width: 100%;
+        text-align: start;
+        padding-right: 25%;
+        margin: 0 0 5px;
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.267);
+        transition: 0.5s;
+      }
+      #show-dialog {
+        position: absolute;
+        z-index: 111;
+      }
+      .hide {
+        display: none;
+      }
+      p.login {
+        font-size: 0.9rem;
+        margin: auto;
+      }
+      p.login img {
+        width: 11px;
+        position: relative;
+        top: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="logIn">
+      <button><img src="imgs/svg/cancel.svg" alt="" /></button>
+      <h2>إنشاء حساب</h2>
+
+      <form action="">
+        <div class="phone-number">
+          <input type="number" name="" placeholder="رقم الجوال" id="phone" />
+          <select name="countryCode" id="countryCode">
+            <option data- value="+970">+970</option>
+            <option style="background-image: url(imgs/svg/country.svg)">
+              +970
+            </option>
+          </select>
+        </div>
+        <p>سوف نرسل لك <strong>رمز التحقق عن طريق رسالة نصية</strong></p>
+
+        <button class="btn">إرسال رمز التحقق</button>
+        <input type="text" name="" placeholder="الإسم الأول" id="" />
+        <input type="text" name="" placeholder="أسم العائلة" id="" />
+        <input type="email" name="" placeholder="البريد الإلكتروني" id="" />
+        <input
+          type="email"
+          name=""
+          placeholder="تأكيد البريد الإلكتروني"
+          id=""
+        />
+        <input type="text" name="" placeholder="كلمة المرور" id="" />
+
+        <div class="check">
+          <input type="checkbox" name="agree" id="" />
+          <label for="agree">أوافق علي <a href="">الشروط والاحكام</a></label>
+        </div>
+        <div class="check">
+          <input type="checkbox" name="email-post-signIn" id="" />
+          <label for="agree">التسجيل للإنضمام للنشرة الإخبارية</label>
+        </div>
+        <input type="submit" class="btn" value="إنشاء حساب" />
+      </form>
+
+      <p class="login">
+        لديك حساب ؟
+        <a href="">
+          تسجيل الدخول <img src="imgs/svg/rightArrowBlue.svg" alt=""
+        /></a>
+      </p>
+    </div>
+    <button id="show-dialog">show dialog</button>
+    <script>
+      const showDialog = document.getElementById("show-dialog");
+      const loginDial0g = document.querySelector(".logIn");
+      const overlay = document.querySelector(".overlay");
+      console.log(showDialog);
+      showDialog.addEventListener("click", function () {
+        console.log("me");
+        overlay.classList.toggle("hide");
+        loginDial0g.classList.toggle("hide");
+      });
+    </script>
+  </body>
+</html>

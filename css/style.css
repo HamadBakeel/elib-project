@@ -1,5 +1,13 @@
+/* @font-face {
+  font-family: "Tajawal";
+      src: url("../font/Tajawal-Regular.ttf") format("ttf"),
+      url("../font/Tajawal-Medium.ttf") format("ttf"),
+      url("../font/Tajawal-Bold.ttf") format("ttf")
+      ;
+} */
 body {
   direction: rtl;
+  /* font-family: Tajawal;  */
 }
 ul li {
   list-style-type: none;
@@ -11,7 +19,6 @@ a {
 ul {
   padding: 0;
 }
-
 /* ------------------- header -------------------- */
 .links {
   display: flex;
@@ -101,6 +108,9 @@ header .search-bar .cart {
 main {
   height: 100vh;
 }
+.card{
+
+}
 /* -------------------- footer ------------------- */
 footer {
   color: #a3a3a3;
@@ -162,6 +172,7 @@ footer input[type="search"] {
   padding: 8px;
   width: 100%;
   border: none;
+  background-color: #eff2f7;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
