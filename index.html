@@ -14,15 +14,36 @@
     <header>
       <nav>
         <ul class="links">
-          <li><a href="">English</a></li>
-          <li><a href="">اليمن YER</a></li>
-          <li><a href="">سياسة الخصوصية</a></li>
-          <li><a href="">المساعدة</a></li>
-          <li><a href="">اتصل بنا</a></li>
-          <li><a href="">من نحن</a></li>
-          <li><a href="">الرئيسية</a></li>
           <li>
-            <i class="fas fa-user"></i>
+            <a href=""> English</a>
+            <object data="imgs/svg/language.svg" type=""></object>
+          </li>
+          <li>
+            <object data="imgs/svg/ksa.svg" type=""></object>
+            <a href=""> اليمن YER</a>
+          </li>
+          <li>
+            <object data="imgs/svg/location.svg" type=""></object>
+            <a href="">سياسة الخصوصية </a>
+          </li>
+          <li>
+            <object data="imgs/svg/i.svg" type=""></object>
+            <a href="">المساعدة</a>
+          </li>
+          <li>
+            <object data="imgs/svg/trueShield.svg" type=""></object>
+            <a href="">اتصل بنا</a>
+          </li>
+          <li>
+            <object data="imgs/svg/van.svg" type=""></object>
+            <a href="">من نحن</a>
+          </li>
+          <li>
+            <object data="imgs/svg/star.svg" type=""></object>
+            <a href="">الرئيسية</a>
+          </li>
+          <li>
+            <object data="imgs/svg/profile.svg" type=""></object>
             <a href="">ادخل لحسابك او سجل الان</a>
           </li>
         </ul>
@@ -31,8 +52,17 @@
         <div class="img">
           <img src="imgs/img.png" alt="" />
         </div>
-        <input type="search" placeholder="البحث" />
-        <div class="cart"><img src="imgs/cart.png" alt="" /></div>
+
+        <div class="bar-icon-container">
+          <input type="search" placeholder="البحث" />
+          <object
+            data="imgs/svg/search.svg"
+            class="searchIcon"
+            type=""
+          ></object>
+        </div>
+        <!-- <div class="cart"><img src="imgs/cart.png" alt="" /></div> -->
+        <object data="imgs/svg/cart.svg" class="cart" type=""></object>
       </div>
 
       <!-- ------------------- slider ------------------- -->
@@ -118,14 +148,24 @@
           </p>
         </ul>
         <section class="posts">
-          <h3>انضم الى نشرتنا البريدية</h3>
+          <div>
+            <h3>انضم الى نشرتنا البريدية</h3>
           <form action="">
             <input type="search" placeholder="ادخل بريدك الالكتروني" />
             <input type="submit" value="اشتراك" />
           </form>
+          </div>
           <div class="contact-us">
             <h3>تواصل معنا</h3>
-            <div class="social-icons"></div>
+            <div class="social-icons">
+              <img src="imgs/social-icons/facebook.svg" alt="">
+              <img src="imgs/social-icons/twitter.svg" alt="">
+              <img src="imgs/social-icons/youtube.svg" alt="">
+              <img src="imgs/social-icons/youtube.svg" alt="">
+              <img src="imgs/social-icons/linkedin.svg" alt="">
+              <img src="imgs/social-icons/snapshat.svg" alt="">
+              <img src="imgs/social-icons/tictok.svg" alt="">
+            </div>
           </div>
         </section>
       </section>
@@ -139,19 +179,31 @@
         </div>
         <div class="pay-methods">
           <div class="img">
-            <img src="imgs/qitaf.png" alt="" />
+            <img src="imgs/paymentMethods/payInGallery.svg" alt="" />
           </div>
           <div class="img">
-            <img src="imgs/mada.jfif" alt="" />
+            <img
+              src="imgs/paymentMethods/qitaf.svg"
+              class="white-card"
+              alt=""
+            />
           </div>
           <div class="img">
-            <img src="imgs/visa.png" alt="" />
+            <img
+              src="imgs/paymentMethods/mada.svg"
+              class="white-card"
+              style="padding: 8px 3px"
+              alt=""
+            />
           </div>
           <div class="img">
-            <img src="imgs/mastercard.png" alt="" />
+            <img src="imgs/paymentMethods/visa.svg" alt="" />
           </div>
           <div class="img">
-            <img src="imgs/americanExpress.jfif" alt="" />
+            <img src="imgs/paymentMethods/masterCard.svg" alt="" />
+          </div>
+          <div class="img">
+            <img src="imgs/paymentMethods/americanExpress.svg" style="background-color: #27ade4; border-radius: 5px;" alt="" />
           </div>
         </div>
       </section>
