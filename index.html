@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/slider.css" />
-    <link rel="stylesheet" href="css/loginDialog.css">
-    <link rel="stylesheet" href="css/signUpDialog.css">
+    <link rel="stylesheet" href="css/loginDialog.css" />
+    <link rel="stylesheet" href="css/signUpDialog.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@100;200;300;400;500;600;700;800;900&display=swap");
       html {
@@ -62,82 +62,86 @@
       == login dialog
       ========= 
     -->
-    <div class="overlay hide"></div>
-    <div class="logIn hide">
-      <button id="hide-dialog"><img src="imgs/svg/cancel.svg" alt="" /></button>
-      <h2>تسجيل الدخول</h2>
+      <div class="overlay hide"></div>
+      <div class="logIn hide">
+        <button id="hide-dialog">
+          <img src="imgs/svg/cancel.svg" alt="" />
+        </button>
+        <h2>تسجيل الدخول</h2>
 
-      <form action="">
-        <input
-          type="text"
-          name=""
-          placeholder="البريد الالكتروني او رقم الجوال"
-          id=""
-        />
-        <div class="password">
-          <input type="password" name="" placeholder="كلمة المرور" id="" />
-          <a href="" class="forgot">نسيت ؟</a>
-        </div>
-        <input
-          type="submit"
-          value=" تسجيل الدخول
+        <form action="">
+          <input
+            type="text"
+            name=""
+            placeholder="البريد الالكتروني او رقم الجوال"
+            id=""
+          />
+          <div class="password">
+            <input type="password" name="" placeholder="كلمة المرور" id="" />
+            <a href="" class="forgot">نسيت ؟</a>
+          </div>
+          <input
+            type="submit"
+            value=" تسجيل الدخول
         "
-        />
-      </form>
+          />
+        </form>
 
-      <div class="create-account">
-        <p>ليس لديك حساب ؟</p>
-        <button id="create-new-account">إنشاء حساب جديد</button>
+        <div class="create-account">
+          <p>ليس لديك حساب ؟</p>
+          <button id="create-new-account">إنشاء حساب جديد</button>
+        </div>
       </div>
-    </div>
 
-    <div class="signUp">
-      <button id="hide-signUpDialog"><img src="imgs/svg/cancel.svg" alt="" /></button>
-      <h2>إنشاء حساب</h2>
+      <div class="signUp hide">
+        <button id="hide-signUpDialog">
+          <img src="imgs/svg/cancel.svg" alt="" />
+        </button>
+        <h2>إنشاء حساب</h2>
 
-      <form action="">
-        <div class="phone-number">
-          <input type="number" name="" placeholder="رقم الجوال" id="phone" />
-          <select name="countryCode" id="countryCode">
-            <option data- value="+970">+970</option>
-            <option style="background-image: url(imgs/svg/country.svg)">
-              +970
-            </option>
-          </select>
-        </div>
-        <p>سوف نرسل لك <strong>رمز التحقق عن طريق رسالة نصية</strong></p>
+        <form action="">
+          <div class="phone-number">
+            <input type="number" name="" placeholder="رقم الجوال" id="phone" />
+            <select name="countryCode" id="countryCode">
+              <option data- value="+970">+970</option>
+              <option style="background-image: url(imgs/svg/country.svg)">
+                +970
+              </option>
+            </select>
+          </div>
+          <p>سوف نرسل لك <strong>رمز التحقق عن طريق رسالة نصية</strong></p>
 
-        <button class="btn">إرسال رمز التحقق</button>
-        <input type="text" name="" placeholder="الإسم الأول" id="" />
-        <input type="text" name="" placeholder="أسم العائلة" id="" />
-        <input type="email" name="" placeholder="البريد الإلكتروني" id="" />
-        <input
-          type="email"
-          name=""
-          placeholder="تأكيد البريد الإلكتروني"
-          id=""
-        />
-        <input type="text" name="" placeholder="كلمة المرور" id="" />
+          <button class="btn">إرسال رمز التحقق</button>
+          <input type="text" name="" placeholder="الإسم الأول" id="" />
+          <input type="text" name="" placeholder="أسم العائلة" id="" />
+          <input type="email" name="" placeholder="البريد الإلكتروني" id="" />
+          <input
+            type="email"
+            name=""
+            placeholder="تأكيد البريد الإلكتروني"
+            id=""
+          />
+          <input type="text" name="" placeholder="كلمة المرور" id="" />
 
-        <div class="check">
-          <input type="checkbox" name="agree" id="" />
-          <label for="agree">أوافق علي <a href="">الشروط والاحكام</a></label>
-        </div>
-        <div class="check">
-          <input type="checkbox" name="email-post-signIn" id="" />
-          <label for="agree">التسجيل للإنضمام للنشرة الإخبارية</label>
-        </div>
-        <input type="submit" class="btn" value="إنشاء حساب" />
-      </form>
+          <div class="check">
+            <input type="checkbox" name="agree" id="" />
+            <label for="agree">أوافق علي <a href="">الشروط والاحكام</a></label>
+          </div>
+          <div class="check">
+            <input type="checkbox" name="email-post-signIn" id="" />
+            <label for="agree">التسجيل للإنضمام للنشرة الإخبارية</label>
+          </div>
+          <input type="submit" class="btn" value="إنشاء حساب" />
+        </form>
 
-      <p class="login">
-        لديك حساب ؟
-        <a href="">
-          تسجيل الدخول <img src="imgs/svg/rightArrowBlue.svg" alt=""
-        /></a>
-      </p>
-    </div>
-    <!-- <button id="show-dialog">show dialog</button> -->
+        <p class="login">
+          لديك حساب ؟
+          <a href="">
+            تسجيل الدخول <img src="imgs/svg/rightArrowBlue.svg" alt=""
+          /></a>
+        </p>
+      </div>
+      <!-- <button id="show-dialog">show dialog</button> -->
 
       <div class="search-bar">
         <div class="img">
@@ -160,20 +164,20 @@
       <div class="slider-container">
         <div class="slides">
           <div class="slide">
-            <img src="imgs/slider_img.webp" alt="" />
+            <img src="imgs/slider_img.webp" class="slide-img" alt="" />
             <h1>1</h1>
           </div>
           <div class="slide">
-            <img src="imgs/slider_img2.webp" alt="" />
+            <img src="imgs/slider_img2.webp" class="slide-img" alt="" />
             <h1>2</h1>
           </div>
           <div class="slide">
-            <img src="imgs/slider_img3.jpg" alt="" />
+            <img src="imgs/slider_img3.jpg" class="slide-img" alt="" />
             <h1>3</h1>
           </div>
           <div class="slide">
             <div>
-              <img src="imgs/slider_img4.webp" alt="" />
+              <img src="imgs/slider_img4.webp" class="slide-img" alt="" />
               <h1>4</h1>
             </div>
           </div>
@@ -250,8 +254,1002 @@
       </div> -->
     </header>
     <main>
+      <div class="brows-by-section">
+        <p
+          style="
+            color: #5e2f26;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+          "
+        >
+          تصفح حسب القسم
+        </p>
+        <div class="sections">
+          <img src="imgs/svg/rightArrow.svg" alt="" />
+          <div class="section">
+            <img src="imgs/svg/tv.svg" alt="" />
+            <p style="color: #5e2f26">دين</p>
+          </div>
+          <div class="section">
+            <img src="imgs/svg/watch.svg" alt="" />
+            <p style="color: #f67828">تاريخ</p>
+          </div>
+          <div class="section">
+            <img src="imgs/svg/keyboard.svg" alt="" />
+            <p style="color: #76689a">سياسة</p>
+          </div>
+          <div class="section">
+            <img src="imgs/svg/phoneCharger.svg" alt="" />
+            <p style="color: #bc4077">روايات</p>
+          </div>
+          <div class="section">
+            <img src="imgs/svg/homeWifi.svg" alt="" />
+            <p style="color: #0089b6">اقتصاد</p>
+          </div>
+          <div class="section">
+            <img src="imgs/svg/gamingHand.svg" alt="" />
+            <p style="color: #7db344">طبخ</p>
+          </div>
+          <div class="section">
+            <img src="imgs/svg/@.svg" alt="" />
+            <p style="color: #9c223f">تربية</p>
+          </div>
+          <img
+            src="imgs/svg/rightArrow.svg"
+            style="transform: rotateY(180deg)"
+            alt=""
+          />
+        </div>
+      </div>
       <div class="categories">
         <div class="card"></div>
+      </div>
+
+      <!-- =========== current-offers =========== -->
+      <div class="current-offers">
+        <div class="head">
+          <p>العروض الحالية</p>
+          <a href="">عرض الكل</a>
+        </div>
+
+        <div class="offers">
+          <!-- ------ offer 1 ------ -->
+          <div class="offer">
+            <img src="imgs/books/beYou.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">كن انت (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 2 ------ -->
+          <div class="offer">
+            <img src="imgs/books/fullSelfTrust.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة التامة بالنفس (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 3 ------ -->
+          <div class="offer">
+            <img src="imgs/books/karmaDiagnosis.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">تشخيص الكارما (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 4 ------ -->
+          <div class="offer">
+            <img src="imgs/books/realConfidence.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة الحقيقية (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 5 ------ -->
+          <div class="offer">
+            <img src="imgs/books/yourNewSelf.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========== religious books =========== -->
+      <div class="current-offers">
+        <div class="head">
+          <p>الكتب الدينية</p>
+          <a href="">عرض الكل</a>
+        </div>
+
+        <div class="offers">
+          <!-- ------ offer 1 ------ -->
+          <div class="offer">
+            <img src="imgs/books/beYou.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">كن انت (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>7.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 2 ------ -->
+          <div class="offer">
+            <img src="imgs/books/fullSelfTrust.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة التامة بالنفس (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>11.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 3 ------ -->
+          <div class="offer">
+            <img src="imgs/books/karmaDiagnosis.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">تشخيص الكارما (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>13.2</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 4 ------ -->
+          <div class="offer">
+            <img src="imgs/books/realConfidence.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة الحقيقية (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>1.9</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 5 ------ -->
+          <div class="offer">
+            <img src="imgs/books/yourNewSelf.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.1</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========== historical books =========== -->
+      <div class="current-offers">
+        <div class="head">
+          <p>الكتب التاريخية</p>
+          <a href="">عرض الكل</a>
+        </div>
+
+        <div class="offers">
+          <!-- ------ offer 1 ------ -->
+          <div class="offer">
+            <img src="imgs/books/beYou.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">كن انت (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>12.4</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 2 ------ -->
+          <div class="offer">
+            <img src="imgs/books/fullSelfTrust.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة التامة بالنفس (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>1.9</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 3 ------ -->
+          <div class="offer">
+            <img src="imgs/books/karmaDiagnosis.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">تشخيص الكارما (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>2.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 4 ------ -->
+          <div class="offer">
+            <img src="imgs/books/realConfidence.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة الحقيقية (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>11.29</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 5 ------ -->
+          <div class="offer">
+            <img src="imgs/books/yourNewSelf.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.5</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========== politics books =========== -->
+      <div class="current-offers">
+        <div class="head">
+          <p>الكتب السياسية</p>
+          <a href="">عرض الكل</a>
+        </div>
+
+        <div class="offers">
+          <!-- ------ offer 1 ------ -->
+          <div class="offer">
+            <img src="imgs/books/beYou.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">كن انت (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>14.1</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 2 ------ -->
+          <div class="offer">
+            <img src="imgs/books/fullSelfTrust.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة التامة بالنفس (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>19.6</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 3 ------ -->
+          <div class="offer">
+            <img src="imgs/books/karmaDiagnosis.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">تشخيص الكارما (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>11.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 4 ------ -->
+          <div class="offer">
+            <img src="imgs/books/realConfidence.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة الحقيقية (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>15</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 5 ------ -->
+          <div class="offer">
+            <img src="imgs/books/yourNewSelf.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>12.7</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========== economy books =========== -->
+      <div class="current-offers">
+        <div class="head">
+          <p>الكتب اللإقتصادية</p>
+          <a href="">عرض الكل</a>
+        </div>
+
+        <div class="offers">
+          <!-- ------ offer 1 ------ -->
+          <div class="offer">
+            <img src="imgs/books/beYou.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">كن انت (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 2 ------ -->
+          <div class="offer">
+            <img src="imgs/books/fullSelfTrust.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة التامة بالنفس (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>7.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 3 ------ -->
+          <div class="offer">
+            <img src="imgs/books/karmaDiagnosis.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">تشخيص الكارما (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 4 ------ -->
+          <div class="offer">
+            <img src="imgs/books/realConfidence.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة الحقيقية (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>9.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 5 ------ -->
+          <div class="offer">
+            <img src="imgs/books/yourNewSelf.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>4.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========== cooking books =========== -->
+      <div class="current-offers">
+        <div class="head">
+          <p>كتب الطبخ</p>
+          <a href="">عرض الكل</a>
+        </div>
+
+        <div class="offers">
+          <!-- ------ offer 1 ------ -->
+          <div class="offer">
+            <img src="imgs/books/beYou.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">كن انت (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 2 ------ -->
+          <div class="offer">
+            <img src="imgs/books/fullSelfTrust.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة التامة بالنفس (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 3 ------ -->
+          <div class="offer">
+            <img src="imgs/books/karmaDiagnosis.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">تشخيص الكارما (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 4 ------ -->
+          <div class="offer">
+            <img src="imgs/books/realConfidence.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة الحقيقية (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 5 ------ -->
+          <div class="offer">
+            <img src="imgs/books/yourNewSelf.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========== the best romantic novels =========== -->
+      <div class="current-offers">
+        <div class="head">
+          <p>أفضل الروايات الرومانسية</p>
+          <a href="">عرض الكل</a>
+        </div>
+
+        <div class="offers">
+          <!-- ------ offer 1 ------ -->
+          <div class="offer">
+            <img src="imgs/books/beYou.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">كن انت (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 2 ------ -->
+          <div class="offer">
+            <img src="imgs/books/fullSelfTrust.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة التامة بالنفس (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 3 ------ -->
+          <div class="offer">
+            <img src="imgs/books/karmaDiagnosis.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">تشخيص الكارما (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 4 ------ -->
+          <div class="offer">
+            <img src="imgs/books/realConfidence.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">الثقة الحقيقية (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- ------ offer 5 ------ -->
+          <div class="offer">
+            <img src="imgs/books/yourNewSelf.jpg" alt="" />
+
+            <div class="type">
+              <img src="imgs/svg/bookRed.svg" alt="" />
+              <span>كتاب الإلكتروني</span>
+            </div>
+
+            <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+
+            <div class="price">
+              <p>17.99</p>
+              <p>ر.س</p>
+            </div>
+
+            <p class="other"></p>
+
+            <div class="options">
+              <img src="imgs/svg/star.svg" alt="" />
+              <img src="imgs/svg/cartRed.svg" alt="" />
+              <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 

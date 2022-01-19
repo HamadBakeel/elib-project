@@ -51,7 +51,7 @@ input[type="password"] {
   background-color: #eff2f7;
   border: none;
   margin-bottom: 5px;
-  width: 350px;
+  width: 73%;
   padding: 7px;
   border-radius: 3px;
   font-size: 1.3rem;
@@ -62,6 +62,7 @@ input[type="password"]:focus-visible {
 }
 .password {
   position: relative;
+  width: 100%
 }
 .forgot {
   text-decoration: none;
@@ -69,7 +70,7 @@ input[type="password"]:focus-visible {
   font-weight: bold;
   position: absolute;
   top: 8px;
-  left: 10px;
+  left: 13%;
 }
 .logIn input[type="submit"] {
   background-color: #d4050b;
@@ -78,7 +79,7 @@ input[type="password"]:focus-visible {
   padding: 8px 0;
   border-radius: 3px;
   font-family: "Tajawal", sans-serif;
-  width: 364px;
+  width: 73%;
   transition: 0.5s;
 }
  .logIn input[type="submit"]:hover {
