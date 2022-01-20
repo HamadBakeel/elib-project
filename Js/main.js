@@ -106,3 +106,36 @@ sorry this special-offer has expired
 }
 let countDown = setInterval(getRemainingTime, 1000);
 getRemainingTime();
+
+// ========= categories ===========
+const filter = document.querySelector(".filter-container select");
+const categories = document.querySelectorAll(".category");
+console.log(categories);
+for (let i = 0; i < categories.length; i++) {
+  // console.log(filter.value);
+  // console.log(categories[i].classList.values);
+}
+filter.addEventListener("click", function (option) {
+  // console.log(filter.value);
+  categories.forEach(function (category) {
+    // console.log(filter);
+    if (!category.classList.contains(filter.value)) category.classList.add("hide")
+    else category.classList.remove("hide");
+  });
+});
+// categories.
+// categories.forEach(function (todo) {
+//   console.log("hi")
+// switch (e.target.value) {
+//   case "all":
+//     todo.style.display = "flex";
+//     break;
+//   case "completed":
+//     if (todo.classList.contains("completed")) todo.style.display = "flex";
+//     else todo.style.display = "none";
+//     break;
+//   case "uncompleted":
+//     if (!todo.classList.contains("completed")) todo.style.display = "flex";
+//     else todo.style.display = "none";
+//   }
+// );

@@ -50,3 +50,11 @@
   align-items: center;
   z-index: -1;
 }
+
+.hide{
+    display: none;
+}
+form{
+    display: flex;
+    justify-content: center;
+}

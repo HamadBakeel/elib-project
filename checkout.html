@@ -24,30 +24,27 @@
         </div>
       </div>
       <div class="progress_btns">
+          <button onclick="handlePrevStep()">Previse</button>
         <button onclick="handleNextStep()">Next</button>
-        <button onclick="handlePrevStep()">Previse</button>
       </div>
     </section>
-    <script>
-      const steps = document.querySelectorAll(".step");
-      let progress = 0;
-      const progressNumbers = 4;
-      function handleNextStep() {
-        if (progress > progressNumbers) {
-          console.log("stop");
-        } else {
-          steps[progress].classList.add("active");
-          progress++;
-        }
-      }
-      function handlePrevStep() {
-        if (progress <= 0) {
-          console.log("stop prev");
-        } else {
-          steps[progress - 1].classList.remove("active");
-          progress--;
-        }
-      }
-    </script>
+    <form class="user-info ">
+        user-info
+    </form>
+    <form class="pay-info hide">
+        pay info
+    </form>
+    <form class="checkout-confirmation hide">
+        checkout checkout-confirmation
+    </form>
+    <section class="done hide">
+        done
+    </section>
+
+
+    
+
+
   </body>
+  <script src="Js/checkout.js"></script>
 </html>
