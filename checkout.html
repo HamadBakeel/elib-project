@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/checkout.css">
+  </head>
+  <body>
+    <section class="progress">
+      <div class="progress_header">
+        <div class="step" id="step-1">
+          <div class="step-content">1</div>
+        </div>
+        <div class="step" id="step-2">
+          <div class="step-content">2</div>
+        </div>
+        <div class="step" id="step-3">
+          <div class="step-content">3</div>
+        </div>
+        <div class="step" id="step-4">
+          <div class="step-content">4</div>
+        </div>
+      </div>
+      <div class="progress_btns">
+        <button onclick="handleNextStep()">Next</button>
+        <button onclick="handlePrevStep()">Previse</button>
+      </div>
+    </section>
+    <script>
+      const steps = document.querySelectorAll(".step");
+      let progress = 0;
+      const progressNumbers = 4;
+      function handleNextStep() {
+        if (progress > progressNumbers) {
+          console.log("stop");
+        } else {
+          steps[progress].classList.add("active");
+          progress++;
+        }
+      }
+      function handlePrevStep() {
+        if (progress <= 0) {
+          console.log("stop prev");
+        } else {
+          steps[progress - 1].classList.remove("active");
+          progress--;
+        }
+      }
+    </script>
+  </body>
+</html>

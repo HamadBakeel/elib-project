@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
+    <link rel="stylesheet" href="css/count-down.css" />
+    <!-- <style>
       @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@100;200;300;400;500;600;700;800;900&display=swap");
       html {
       }
@@ -197,10 +198,50 @@
         position: relative;
         top: 2px;
       }
+    </style> -->
+    <style>
+      html {
+        direction: rtl;
+      }
     </style>
   </head>
   <body>
-    <div class="overlay"></div>
+      <!-- info -->
+
+        <div class="deadline">
+          <p class="special-offer">الوقت المتبقي</p>
+          <!-- secs -->
+          <div class="deadline-format">
+            <div>
+              <h4 class="secs">22</h4>
+              <span>S</span>
+            </div>
+          </div>
+        <!-- mins -->
+        <div class="deadline-format">
+          <div>
+            <h4 class="mins">22</h4>
+            <span>M</span>
+          </div>
+        </div>
+        <!-- hours -->
+        <div class="deadline-format">
+          <div>
+            <h4 class="hours">22</h4>
+            <span>H</span>
+          </div>
+        </div>
+        <!-- days -->
+        <div class="deadline-format">
+          <div>
+            <h4 class="days">22</h4>
+            <span>D</span>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- <div class="overlay"></div>
     <div class="logIn">
       <button><img src="imgs/svg/cancel.svg" alt="" /></button>
       <h2>إنشاء حساب</h2>
@@ -247,17 +288,82 @@
         /></a>
       </p>
     </div>
-    <button id="show-dialog">show dialog</button>
+    <button id="show-dialog">show dialog</button> -->
     <script>
-      const showDialog = document.getElementById("show-dialog");
-      const loginDial0g = document.querySelector(".logIn");
-      const overlay = document.querySelector(".overlay");
-      console.log(showDialog);
-      showDialog.addEventListener("click", function () {
-        console.log("me");
-        overlay.classList.toggle("hide");
-        loginDial0g.classList.toggle("hide");
-      });
+
+      const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      const weekdays = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      // const special-offer = document.querySelector(".special-offer");
+      const deadline = document.querySelector(".deadline");
+      const items = document.querySelectorAll(".deadline-format h4");
+      const tempDate = new Date();
+      const tempYear = tempDate.getFullYear();
+      const tempMonth = tempDate.getMonth();
+      const tempDay = tempDate.getDate();
+      const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
+
+      const year = futureDate.getFullYear();
+      const month = months[futureDate.getMonth()];
+      const date = futureDate.getDate();
+      const weekday = weekdays[futureDate.getDay()];
+      const hours = futureDate.getHours();
+      const mins = futureDate.getMinutes();
+
+      function getRemainingTime() {
+        const futureTime = futureDate.getTime();
+        const today = new Date().getTime();
+        const t = futureTime - today;
+
+        const oneDay = 24 * 60 * 60 * 1000;
+        const oneHour = 60 * 60 * 1000;
+        const oneMinute = 60 * 1000;
+        // calculate all the values
+        const days = Math.floor(t / oneDay);
+        const hours = Math.floor((t % oneDay) / oneHour);
+        const minutes = Math.floor((t % oneHour) / oneMinute);
+        const seconds = Math.floor((t % oneMinute) / 1000);
+
+        const values = [ seconds, minutes,hours,days];
+
+        function format(item) {
+          if (item < 10) return `0${item}`;
+          return item;
+        }
+
+        items.forEach(function (item, index) {
+          item.innerHTML = format(values[index]);
+        });
+        if (t < 0) {
+          clearInterval(countDown);
+          deadline.innerHTML = `<h4 class="expired">
+    sorry this special-offer has expired
+    </h4>`;
+        }
+      }
+      let countDown = setInterval(getRemainingTime, 1000);
+      getRemainingTime();
     </script>
   </body>
 </html>

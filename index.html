@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/slider.css" />
     <link rel="stylesheet" href="css/loginDialog.css" />
     <link rel="stylesheet" href="css/signUpDialog.css" />
+    <link rel="stylesheet" href="css/count-down.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@100;200;300;400;500;600;700;800;900&display=swap");
       html {
@@ -156,8 +157,11 @@
             type=""
           ></object>
         </div>
-        <!-- <div class="cart"><img src="imgs/cart.png" alt="" /></div> -->
-        <object data="imgs/svg/cart.svg" class="cart" type=""></object>
+
+        <div style="position: relative">
+          <a href="cart.html"> </a>
+          <object data="imgs/svg/cart.svg" class="cart" type=""></object>
+        </div>
       </div>
 
       <!-- ------------------- slider ------------------- -->
@@ -316,6 +320,38 @@
         <div class="offers">
           <!-- ------ offer 1 ------ -->
           <div class="offer">
+            <div class="deadline">
+              <p class="special-offer">الوقت المتبقي</p>
+              <!-- secs -->
+              <div class="deadline-format">
+                <div>
+                  <h4 class="secs">22</h4>
+                  <span>S</span>
+                </div>
+              </div>
+              <!-- mins -->
+              <div class="deadline-format">
+                <div>
+                  <h4 class="mins">22</h4>
+                  <span>M</span>
+                </div>
+              </div>
+              <!-- hours -->
+              <div class="deadline-format">
+                <div>
+                  <h4 class="hours">22</h4>
+                  <span>H</span>
+                </div>
+              </div>
+              <!-- days -->
+              <div class="deadline-format">
+                <div>
+                  <h4 class="days">22</h4>
+                  <span>D</span>
+                </div>
+              </div>
+            </div>
+
             <img src="imgs/books/beYou.jpg" alt="" />
 
             <div class="type">
@@ -1145,7 +1181,7 @@
             <div class="options">
               <img src="imgs/svg/star.svg" alt="" />
               <img src="imgs/svg/cartRed.svg" alt="" />
-              
+
               <img src="imgs/svg/inverseDirectionArrows.svg" alt="" />
             </div>
           </div>

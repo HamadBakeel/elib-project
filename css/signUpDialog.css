@@ -120,7 +120,7 @@
 .signUp label {
   display: inline-block;
   font-size: 0.8rem;
-  color: #b5babc;
+  color: #5f6263;
 }
 .signUp .check {
   display: flex;
@@ -155,7 +155,7 @@
 }
 .signUp p {
   font-size: 0.7rem;
-  color: #b5babc;
+  color: #5f6263;
   width: 100%;
   text-align: start;
   padding-right: 25%;
@@ -170,6 +170,10 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 /* #show-dialog {
   position: absolute;
