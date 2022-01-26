@@ -3,12 +3,12 @@ const loginDialog = document.querySelector(".logIn");
 const overlay = document.querySelector(".overlay");
 const hideDialog = document.getElementById("hide-dialog");
 const hideSignUpDialog = document.getElementById("hide-signUpDialog");
+const login = document.querySelector(".login a");
+// console.log(login);
 
 const createNewAccout = document.getElementById("create-new-account");
 const signUpDialog = document.querySelector(".signUp");
-console.log(signUpDialog);
 
-console.log(showDialog);
 showDialog.addEventListener("click", function (e) {
   e.preventDefault();
   overlay.classList.toggle("hide");
@@ -30,6 +30,62 @@ createNewAccout.addEventListener("click", function () {
   loginDialog.classList.add("hide");
   signUpDialog.classList.remove("hide");
 });
+login.addEventListener("click", function (e) {
+  e.preventDefault();
+  signUpDialog.classList.add("hide");
+  loginDialog.classList.remove("hide");
+});
+
+// =============== categtories owl carousel ================
+const categoriesContainer = document.querySelector(".offers");
+const categories = document.querySelectorAll(".offer");
+const slideButtons = document.querySelectorAll(".current-offers > img");
+console.log(slideButtons);
+
+// let span = document.getElementsByTagName("span");
+// let product = document.getElementsByClassName("product");
+let product_page = Math.ceil(categories.length / 4);
+let l = 0;
+let movePer = 15.34;
+let maxMove = 50;
+// mobile_view
+let mob_view = window.matchMedia("(max-width: 768px)");
+if (mob_view.matches) {
+  movePer = 50.36;
+  maxMove = 504;
+}
+
+let right_mover = () => {
+  l = l + movePer;
+  if (categories == 1) {
+    l = 0;
+  }
+  for (const i of categories) {
+    if (l > maxMove) {
+      l = l - movePer;
+    }
+    i.style.right = "-" + l + "%";
+  }
+};
+let left_mover = () => {
+  l = l - movePer;
+  if (l <= 0) {
+    l = 0;
+  }
+  for (const i of categories) {
+    if (product_page > 1) {
+      i.style.right = "-" + l + "%";
+    }
+  }
+};
+slideButtons[0].onclick = () => {
+  right_mover();
+};
+slideButtons[1].onclick = () => {
+  left_mover();
+};
+
+// console.log(categories);
 
 // ======== spacial offer count-down ==============
 
@@ -60,6 +116,7 @@ const weekdays = [
 // const special-offer = document.querySelector(".special-offer");
 const deadline = document.querySelector(".deadline");
 const items = document.querySelectorAll(".deadline-format h4");
+// console.log(items);
 const tempDate = new Date();
 const tempYear = tempDate.getFullYear();
 const tempMonth = tempDate.getMonth();
@@ -107,35 +164,45 @@ sorry this special-offer has expired
 let countDown = setInterval(getRemainingTime, 1000);
 getRemainingTime();
 
-// ========= categories ===========
-const filter = document.querySelector(".filter-container select");
-const categories = document.querySelectorAll(".category");
-console.log(categories);
-for (let i = 0; i < categories.length; i++) {
-  // console.log(filter.value);
-  // console.log(categories[i].classList.values);
-}
-filter.addEventListener("click", function (option) {
-  // console.log(filter.value);
-  categories.forEach(function (category) {
-    // console.log(filter);
-    if (!category.classList.contains(filter.value)) category.classList.add("hide")
-    else category.classList.remove("hide");
-  });
+// ========= filter ===========
+// const filter = document.querySelector(".filter-container select");
+// const categories = document.querySelectorAll(".category");
+
+// filter.addEventListener("click", function (option) {
+//   categories.forEach(function (category) {
+//     if (!category.classList.contains(filter.value))
+//       category.classList.add("hide");
+//     else category.classList.remove("hide");
+//     if (filter.value === "all") category.classList.remove("hide");
+//   });
+// });
+
+// ============= header responsive =============
+const showLinks = document.querySelector(".show-links-button");
+const links = document.querySelector(".links");
+showLinks.addEventListener("click", function () {
+  links.classList.toggle("show-links");
+  // console.log("me");
 });
-// categories.
-// categories.forEach(function (todo) {
-//   console.log("hi")
-// switch (e.target.value) {
-//   case "all":
-//     todo.style.display = "flex";
-//     break;
-//   case "completed":
-//     if (todo.classList.contains("completed")) todo.style.display = "flex";
-//     else todo.style.display = "none";
-//     break;
-//   case "uncompleted":
-//     if (!todo.classList.contains("completed")) todo.style.display = "flex";
-//     else todo.style.display = "none";
-//   }
-// );
+
+// =========== cart counter =============
+const cartButton = document.querySelectorAll(
+  ".current-offers .options img:nth-child(2)"
+);
+const cartCounter = document.querySelector("header .search-bar .cart");
+
+// =========== language switch  =============
+const languageSwitch = document.getElementById("language-switch");
+const language = document.getElementById("language");
+const languageText = document.getElementById("language-text");
+languageSwitch.addEventListener("click", function (e) {
+  e.preventDefault();
+  console.log(language.getAttribute("href"));
+  if (language.getAttribute("href") === "css/english.css") {
+    language.setAttribute("href", "css/arabic.css");
+    languageText.textContent = "English";
+  } else {
+    language.setAttribute("href", "css/english.css");
+    languageText.textContent = "عربي";
+  }
+});

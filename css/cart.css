@@ -192,7 +192,7 @@ p {
   font-size: 0.6rem;
 }
 .bill .bill-bottom .finish-shopping {
-  width: 100%;
+  width: 92%;
   border: none;
   cursor: pointer;
   background-color: #d6060e;
@@ -202,6 +202,8 @@ p {
   padding: 8px;
   margin-top: 10px;
   border-radius: 3px;
+  display: block;
+  text-align: center;
 
 }
 .bill .bill-bottom .finish-shopping:hover {

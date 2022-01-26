@@ -5,18 +5,30 @@ slides.forEach(function (slide, index) {
   slide.style.left = `${index * 100}%`;
 });
 let counter = 0;
-nextBtn.addEventListener("click", function () {
+nextBtn.addEventListener("click", slideNext);
+function slideNext() {
   counter++;
   carousel();
-});
-
-prevBtn.addEventListener("click", function () {
+}
+function autoSlide() {
+  // counter = 0;
+  if (counter < slides.length) {
+    carousel();
+    counter++;
+  } else {
+    counter = 0;
+    slideNext();
+  }
+  setTimeout(autoSlide, 5000);
+}
+autoSlide();
+prevBtn.addEventListener("click", slidePrev);
+function slidePrev() {
   counter--;
   carousel();
-});
+}
 
 function carousel() {
- 
   if (counter < slides.length - 1) {
     nextBtn.style.display = "block";
   } else {

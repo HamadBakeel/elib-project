@@ -9,9 +9,21 @@
   background-color: white;
   border-radius: 5px;
   padding-bottom: 20px;
-  position: absolute;
+  position: fixed;
   left: 30%;
   z-index: 111;
+}
+@media screen and (max-width: 600px) {
+  .logIn {
+    width: 65%;
+    left: 18%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .logIn{
+    width: 33%;
+    left: 34%;
+  }
 }
 .logIn > button {
   width: 25px;
@@ -62,7 +74,7 @@ input[type="password"]:focus-visible {
 }
 .password {
   position: relative;
-  width: 100%
+  width: 100%;
 }
 .forgot {
   text-decoration: none;
@@ -82,7 +94,7 @@ input[type="password"]:focus-visible {
   width: 73%;
   transition: 0.5s;
 }
- .logIn input[type="submit"]:hover {
+.logIn input[type="submit"]:hover {
   background-color: #5c0005;
 }
 input[type="text"]::placeholder,
