@@ -1,76 +1,7 @@
-/* .progress {
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+section.container {
+  margin-block: 30px;
+  direction: ltr;
 }
-.progress_header {
-  height: 20%;
-  width: 60%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.step {
-  position: relative;
-  width: 100%;
-}
-.step.active::after {
-  transition: 0.5s;
-  background-color: rgb(26, 109, 23);
-  width: calc(100% - 33px);
-}
-.step.active .step-content {
-  background-color: rgb(120, 201, 118);
-  color: white;
-}
-.step:first-child .step-content {
-  background-color: rgb(120, 201, 118);
-  color: white;
-}
-.step::after {
-  content: "";
-  position: absolute;
-  left: 33px;
-  top: 46%;
-  width: 0;
-  height: 5px;
-  background-color: rgb(201, 199, 198);
-}
-.step:first-child::after {
-  background-color: rgb(26, 109, 23);
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-}
-.step:last-child::after {
-  width: 0%;
-}
-.step-content {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  background-color: lavender;
-  border: 2px solid rgb(169, 169, 173);
-  color: rgb(169, 169, 173);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -1;
-}
-
-.hide {
-  display: none;
-}
-form {
-  display: flex;
-  justify-content: center;
-} */
 
 .progress {
   width: 75%;
@@ -141,8 +72,10 @@ form {
   gap: 50px;
   justify-content: center;
   width: 100%;
+  margin-top: 50px;
 }
 .progress_btns button {
+  font-family: tajawal;
   cursor: pointer;
   /* border: 1px rgb(26, 109, 23) solid; */
   font-weight: bold;
@@ -150,7 +83,7 @@ form {
   border: none;
   font-size: 1.2rem;
   padding-block: 10px;
-  width: 80px;
+  width: 90px;
   color: rgb(26, 109, 23);
   background-color: transparent;
   display: flex;
@@ -190,9 +123,10 @@ form {
   caret-color: grey;
   direction: rtl;
   background-color: #eff2f7;
-  /* padding: 15px; */
-  width: 300px;
+  padding: 10px;
+  width: 300px !important;
   height: 45px;
+  font-family: tajawal;
   font-size: 1.2rem;
   position: relative;
   border-radius: 5px;
@@ -205,7 +139,7 @@ form {
   position: absolute;
   top: 3px;
   right: 3px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 .checkout-inputs form input:focus-visible {
   outline: none;
@@ -214,6 +148,7 @@ form {
   box-shadow: 0px 0px 5px 0px rgba(128, 128, 128, 0.445);
   padding: 10px;
   width: 320px;
+  height: fit-content;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -270,17 +205,14 @@ p.insure,
   font-weight: bold;
   text-align: end;
 }
-.done{
+.done {
   text-align: center;
 }
-.done h2{
+.done h2 {
   color: forestgreen;
   font-size: 2rem;
   margin-bottom: 5px;
 }
-
-
-
 
 .hide {
   display: none !important;

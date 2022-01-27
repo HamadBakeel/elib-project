@@ -24,10 +24,10 @@
     <header>
       <nav>
         <ul class="links hide-links">
-          <!-- <i class="fa-fas-bars"></i> -->
-          <button class="show-links">show</button>
-          <li>
-            <a href=""> English</a>
+          <button class="show-links-button"><i class="fas fa-bars"></i></button>
+          <!-- <button class="show-links">show</button> -->
+          <li id="language-switch">
+            <a href="" id="language-text"> English</a>
             <object data="imgs/svg/language.svg" type=""></object>
           </li>
           <li>
@@ -52,7 +52,7 @@
           </li>
           <li>
             <object data="imgs/svg/star.svg" type=""></object>
-            <a href="">الرئيسية</a>
+            <a href="" class="index">الرئيسية</a>
           </li>
           <li id="show-dialog">
             <object data="imgs/svg/profile.svg" type=""></object>
@@ -162,6 +162,8 @@
         </div>
 
         <div style="position: relative">
+          <span id="counter">1</span>
+
           <a href="cart.html"> </a>
           <object data="imgs/svg/cart.svg" class="cart" type=""></object>
         </div>
@@ -1142,47 +1144,6 @@
     <!-- ------------------- footer ------------------- -->
     <footer>
       <section class="upper-part">
-        <ul class="about">
-          <h3>عن جرير</h3>
-          <li><a href="">من نحن</a></li>
-          <li><a href="">الحوكمه</a></li>
-          <li><a href="">علاقات المستثمرين و التقارير</a></li>
-          <li><a href="">الاستدامه</a></li>
-          <li><a href="">الاخبار</a></li>
-          <h3><a href="">فرص العمل</a></h3>
-        </ul>
-
-        <ul class="quick-links">
-          <h3>روابط سريعه</h3>
-          <li><a href="">اصدارات جرير</a></li>
-          <li><a href="">قارئ جرير</a></li>
-          <li><a href="">شركاء برامج المكافئات </a></li>
-          <li><a href="">خدمات شركات الاتصال</a></li>
-        </ul>
-
-        <ul class="services">
-          <h3>خدمات جرير</h3>
-          <li><a href=""> خدمات تقسيط تقسيط المشتريات</a></li>
-          <li><a href="">خدمات ما بعد البيع</a></li>
-          <li><a href="">خدمات الحمايه الشاملة</a></li>
-          <li><a href="">حماية أجهزة آبل</a></li>
-          <li><a href="">بطاقة خصم جرير</a></li>
-          <li><a href="">بطاقة جرير للهدايا</a></li>
-        </ul>
-
-        <ul class="custumer-services">
-          <h3>خدمةالعملاء</h3>
-          <li><a href=""> مبيعات الشركات</a></li>
-          <li><a href="">الاسئلة المتكررة</a></li>
-          <li><a href="">دليل التسوق والمطبوعات</a></li>
-          <li><a href="">مواقع المعارض</a></li>
-          <li><a href="">سياسة الضمان</a></li>
-          <li><a href="">سياسة الاسترجاع والاستبدال</a></li>
-          <p class="call-us">
-            اتصل بنا <br />
-            92090232323
-          </p>
-        </ul>
         <section class="posts">
           <div>
             <h3>انضم الى نشرتنا البريدية</h3>
@@ -1204,6 +1165,48 @@
             </div>
           </div>
         </section>
+
+        <ul class="custumer-services">
+          <h3>خدمةالعملاء</h3>
+          <li><a href=""> مبيعات الشركات</a></li>
+          <li><a href="">الاسئلة المتكررة</a></li>
+          <li><a href="">دليل التسوق والمطبوعات</a></li>
+          <li><a href="">مواقع المعارض</a></li>
+          <li><a href="">سياسة الضمان</a></li>
+          <li><a href="">سياسة الاسترجاع والاستبدال</a></li>
+          <p class="call-us">
+            اتصل بنا <br />
+            92090232323
+          </p>
+        </ul>
+
+        <ul class="services">
+          <h3>خدمات جرير</h3>
+          <li><a href=""> خدمات تقسيط تقسيط المشتريات</a></li>
+          <li><a href="">خدمات ما بعد البيع</a></li>
+          <li><a href="">خدمات الحمايه الشاملة</a></li>
+          <li><a href="">حماية أجهزة آبل</a></li>
+          <li><a href="">بطاقة خصم جرير</a></li>
+          <li><a href="">بطاقة جرير للهدايا</a></li>
+        </ul>
+
+        <ul class="quick-links">
+          <h3>روابط سريعه</h3>
+          <li><a href="">اصدارات جرير</a></li>
+          <li><a href="">قارئ جرير</a></li>
+          <li><a href="">شركاء برامج المكافئات </a></li>
+          <li><a href="">خدمات شركات الاتصال</a></li>
+        </ul>
+
+        <ul class="about">
+          <h3>عن جرير</h3>
+          <li><a href="">من نحن</a></li>
+          <li><a href="">الحوكمه</a></li>
+          <li><a href="">علاقات المستثمرين و التقارير</a></li>
+          <li><a href="">الاستدامه</a></li>
+          <li><a href="">الاخبار</a></li>
+          <h3><a href="">فرص العمل</a></h3>
+        </ul>
       </section>
       <section class="lower-part">
         <div class="text">
@@ -1224,8 +1227,7 @@
               alt=""
             />
           </div>
-          <div class="img">
-            <img
+          <div class="img"> <img
               src="imgs/paymentMethods/mada.svg"
               class="white-card"
               style="padding: 8px 3px"
@@ -1248,6 +1250,7 @@
         </div>
       </section>
     </footer>
+
     <script src="Js/main.js"></script>
     <script src="Js/categories.js"></script>
   </body>

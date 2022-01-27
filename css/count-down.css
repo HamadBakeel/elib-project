@@ -4,24 +4,24 @@ Countdown Timer
 ===============
 */
 
-  .special-offer{
-      margin: 0;
-      color: white;
-  }
+.special-offer {
+  margin: 0;
+  color: white;
+}
 .deadline {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   height: 1rem;
   align-items: center;
   background-color: hsl(360, 67%, 44%);
   width: fit-content;
   padding: 5px;
+  color: white;
   border-bottom-right-radius: 10px;
 }
-.deadline-format {
-  /* background: darkgrey; */
+/* .deadline-format {
   color: white;
   margin-right: 5px;
   text-align: center;
@@ -35,7 +35,7 @@ margin: 0;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.5rem;
-}
+} */
 /* .deadline h4:not(.expired) {
   font-size: 2rem;
   margin-bottom: 0.25rem;

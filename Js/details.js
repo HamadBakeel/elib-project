@@ -1,27 +1,66 @@
 // ============= image view =============
-const imageViewContainer = document.querySelector(".img-view-container");
-const imageView = document.querySelector(".img-view");
+const imageViewContainer = document.querySelector(".img-slider-container");
+const slideImage = document.querySelector(".img-view > img");
 const smallImages = document.querySelectorAll(".small-imgs img");
 const bigImg = document.querySelector(".big-img img");
+const exit = document.getElementById("exit");
 
-smallImages.forEach(function (img) {
-  //   console.log(img.getAttribute("src"));
-  img.addEventListener("click", function () {
-    console.log("clicked");
-    imageViewContainer.classList.remove("hide");
-    imageView.setAttribute("src", img.getAttribute("src"));
-    bigImg.setAttribute("src", img.getAttribute("src"));
-  });
+bigImg.addEventListener("click", function () {
+  imageViewContainer.classList.remove("hide");
 });
-imageViewContainer.addEventListener("click", function () {
+const slideButtons = document.querySelectorAll(
+  ".img-slider-container .buttons img"
+);
+const images = [
+  `imgs/books/yourNewSelf.jpg`,
+  `imgs/books/realConfidence.jpg`,
+  `imgs/books/fullSelfTrust.jpg`,
+  `imgs/books/beYou.jpg`,
+  `imgs/books/karmaDiagnosis.jpg`,
+];
+
+let index = 0;
+slideButtons[0].addEventListener("click", function () {
+  if (index < images.length) {
+    slideImage.setAttribute("src", images[index]);
+    console.log(images[index]);
+    console.log(index);
+    index++;
+  } else {
+    slideImage.innerHTML = images[index];
+    console.log(index);
+    index = 0;
+  }
+});
+slideButtons[1].addEventListener("click", function () {
+  if (index > 0) {
+    index--;
+    slideImage.setAttribute("src", images[index]);
+    console.log(images[index]);
+    console.log(index);
+  } else if (index === 0) {
+    index = 4;
+    slideImage.setAttribute("src", images[index]);
+  }
+});
+exit.addEventListener("click", function () {
   imageViewContainer.classList.add("hide");
 });
+
+// smallImages.forEach(function (img) {
+//   img.addEventListener("click", function () {
+//     console.log("clicked");
+//     imageViewContainer.classList.remove("hide");
+//     imageView.setAttribute("src", img.getAttribute("src"));
+//     bigImg.setAttribute("src", img.getAttribute("src"));
+//   });
+// });
 
 // ============= header responsive =============
 const showLinksButton = document.querySelector(".show-links-button");
 const links = document.querySelector(".links");
 showLinksButton.addEventListener("click", function () {
-  links.classList.toggle("hide-links");
+  links.classList.toggle("show-links");
 });
 
 // ============== show more or less of the book specs ===========
@@ -55,3 +94,11 @@ showReviewsButton.addEventListener("click", function () {
     showReviewsButton.textContent = "عرض مراجعات أكثر (15)";
   }
 });
+
+const cartCounter = document.getElementById("counter");
+window.onload = function () {
+  if (localStorage.clickcount)
+    if (localStorage.clickcount > 0)
+      cartCounter.innerText = localStorage.clickcount;
+    else cartCounter.style.display = "none";
+};

@@ -4,15 +4,15 @@ const rangeShow = document.getElementById("range");
 const prices = document.querySelectorAll(
   ".current-offers .price p:first-child"
 );
-const offers = document.querySelectorAll(".offer");
+const offers2 = document.querySelectorAll(".offer");
 // const
 priceFilter.addEventListener("change", function () {
   rangeShow.innerText = priceFilter.value;
-  for (let i = 0; i < offers.length; i++) {
+  for (let i = 0; i < offers2.length; i++) {
     if (parseFloat(prices[i].innerText) > priceFilter.value) {
-      offers[i].classList.add("hide");
+      offers2[i].classList.add("hide");
     } else {
-      offers[i].classList.remove("hide");
+      offers2[i].classList.remove("hide");
     }
   }
 });
