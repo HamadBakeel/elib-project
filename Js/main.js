@@ -59,6 +59,7 @@ cartButton.forEach(function (button) {
       } else {
         localStorage.clickcount = 0;
       }
+      cartCounter.style.padding = "1px 3px"
       cartCounter.innerText = localStorage.clickcount;
     }
   });
@@ -67,8 +68,12 @@ window.onload = function () {
   if (localStorage.clickcount)
     if (localStorage.clickcount > 0)
       cartCounter.innerText = localStorage.clickcount;
-    else cartCounter.style.display = "none";
+    // else cartCounter.style.display = "none";
+    else {
+      cartCounter.style.padding = "0";
+    }
 };
+
 // =========== language switch  =============
 const languageSwitch = document.getElementById("language-switch");
 const language = document.getElementById("language");

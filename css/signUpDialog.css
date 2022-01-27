@@ -19,12 +19,13 @@
 }
 @media screen and (max-width: 600px) {
   .signUp {
-    width: 65%;
-    left: 18%;
+    width: 83%;
+    left: 9%;
+    top: 70px;
   }
 }
 @media screen and (min-width: 1000px) {
-  .signUp{
+  .signUp {
     width: 33%;
     left: 34%;
   }

@@ -58,10 +58,10 @@ header a {
     align-items: center;
   }
   .cart-item {
-    width: 80%;
+    width: 95%;
   }
   .bill {
-    width: 50%;
+    width: 65%;
     height: fit-content;
     gap: 40px !important;
   }
@@ -234,4 +234,3 @@ header a {
 .bill .bill-bottom .finish-shopping:hover {
   background-color: black;
 }
-

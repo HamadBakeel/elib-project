@@ -15,12 +15,12 @@
 }
 @media screen and (max-width: 600px) {
   .logIn {
-    width: 65%;
-    left: 18%;
+    width: 80%;
+    left: 11%;
   }
 }
 @media screen and (min-width: 1000px) {
-  .logIn{
+  .logIn {
     width: 33%;
     left: 34%;
   }

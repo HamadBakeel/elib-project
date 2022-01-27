@@ -7,9 +7,6 @@ function handleNextStep() {
   if (progress == 4) {
     localStorage.clickcount = 0;
     location.href = "index.html";
-  }
-  if (progress > progressNumbers) {
-    console.log("stop");
   } else {
     steps[progress].classList.add("active");
     for (let i = 0; i < progressNumbers; i++) {
@@ -21,8 +18,8 @@ function handleNextStep() {
 }
 
 function handlePrevStep() {
+  if (progress === 4) progress = 3;
   if (progress <= 0) {
-    console.log("stop prev");
     progress = 1;
   } else {
     steps[progress].classList.remove("active");
@@ -30,7 +27,6 @@ function handlePrevStep() {
       checkoutSteps[i].classList.add("hide");
     }
     checkoutSteps[progress - 1].classList.remove("hide");
-    console.log(progress);
     progress--;
   }
 }

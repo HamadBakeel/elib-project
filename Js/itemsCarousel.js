@@ -2,8 +2,9 @@
 // const categoriesContainer = document.querySelector(".offers");
 const categories = document.querySelectorAll("#first-items-slider .offer");
 const slideButtons = document.querySelectorAll(".current-offers > img");
+const slideContainers = document.querySelectorAll(".current-offers");
 // const firstItemsSlider = document.getElementById("first-items-slider");
-// console.log(slideButtons);
+console.log(slideButtons);
 
 let product_page = Math.ceil(categories.length / 4);
 let l = 0;
@@ -14,6 +15,12 @@ let mob_view = window.matchMedia("(max-width: 768px)");
 if (mob_view.matches) {
   movePer = 40.36;
   maxMove = 220;
+  slideButtons.forEach(function (button) {
+    button.style.display = "none";
+  });
+  slideContainers.forEach(function (container) {
+    container.style.margin = "0 20px";
+  });
 }
 let mob_view2 = window.matchMedia("(max-width: 400px)");
 if (mob_view2.matches) {
